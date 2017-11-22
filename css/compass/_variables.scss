@@ -1,0 +1,11 @@
+@import "bourbon";
+$colors: rgb(241, 157, 165), rgb(138, 134, 142);
+$breakpoints: ("small" : 600px, "medium" : 900px, "large" : 1200px);
+$fz: 15px;
+$headersMap: (h1:27px, h2:24px, h3:20px, h4:18px, h5:15px, h6:12px);
+
+@each $name, $size in $headersMap {
+  #{$name} {
+    font-size: #{$size};
+  }
+}
