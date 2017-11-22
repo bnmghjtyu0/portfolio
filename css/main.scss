@@ -1,0 +1,71 @@
+@import "bourbon";
+$colors: rgb(241, 157, 165), rgb(138, 134, 142);
+$breakpoints: ("small" : 600px, "medium" : 900px, "large" : 1200px);
+$fz: 15px;
+$headersMap: (h1:27px, h2:24px, h3:20px, h4:18px, h5:15px, h6:12px);
+
+@each $name, $size in $headersMap {
+  #{$name} {
+    font-size: #{$size};
+  }
+}
+body {
+  font-size: 15px;
+  font-family: "微軟正黑體", Helvetica neue, sans-serif;
+}
+
+.l-about {
+  max-width:600px;
+  margin:0 auto;
+  .o-title {
+    text-align: center;
+    padding: 20px 0 10px 0;
+  }
+  .l-about-info {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .l-about-info-l {
+      flex-basis: 260px;
+      .l-about-info-pic {
+      }
+    }
+    .l-about-info-r {
+      margin-left: 30px;
+      .l-about-info-r-text {
+        margin-bottom: 26px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        h4 {
+          font-size: em($fz + 3px);
+          color: nth($colors, 1);
+          margin: 0 0 6px;
+        }
+        p,
+        a {
+          color: nth($colors, 2);
+          font-size: em($fz);
+        }
+      }
+    }
+  }
+  .l-about-introduct {
+    margin:30px 0;
+    p {
+      font-size:em($fz + 2px);
+    }
+  }
+  .l-about-interest {
+      display: flex;
+      justify-content: center;
+      .item {
+          margin:0 20px;
+          img {
+              width:60px;
+          }
+      }
+  }
+}
+
