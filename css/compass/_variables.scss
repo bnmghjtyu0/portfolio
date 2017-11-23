@@ -9,3 +9,9 @@ $headersMap: (h1:27px, h2:24px, h3:20px, h4:18px, h5:15px, h6:12px);
     font-size: #{$size};
   }
 }
+
+@for $i from 1 through 20 {
+  .mt-#{$i*5} {
+    margin-top:#{$i*5}px;
+  }
+}
